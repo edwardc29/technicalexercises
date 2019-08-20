@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="movieModel"
+            type="com.carrion.edward.app3.model.MovieModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:padding="@dimen/lv_row_padding">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/lv_row_icon_width"
+            android:layout_height="@dimen/lv_row_icon_width"
+            android:paddingLeft="@dimen/lv_row_icon_padding"
+            android:paddingRight="@dimen/lv_row_icon_padding"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@{movieModel.title}"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/lv_row_text_size" />
+
+    </LinearLayout>
+</layout>
